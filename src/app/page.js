@@ -1,28 +1,23 @@
-'use client';
+import Link from 'next/link';
 
-import styles from './page.module.css'
-
-import { useState, useEffect } from 'react'
 
 export default function Home() {
-  const [dogs, setDogs] = useState([]);
+//   const [dogs, setDogs] = useState([]);
 
-  useEffect(() => {
-    const getDogs = async () => {
-      const response = await fetch();
-      const retrievedDogs = await response.json();
-      setDogs(retrievedDogs);
-    }
+//   useEffect(() => {
+//     const getDogs = async () => {
+//       const response = await fetch();
+//       const retrievedDogs = await response.json();
+//       setDogs(retrievedDogs);
+//     }
 
-    getDogs()
+//     getDogs()
 
-  }, []);
+//   }, []);
   return (
-    <main className={styles.main}>
-      <h1>Hello React!</h1>
-      { dogs.map(dog => (
-        <h1>{ dog.name }</h1>
-      ))}
+    <main>
+      <h1>Hello Index Page!</h1>
+      <Link href="/dogs">Lets see the dogs</Link>
     </main>
   )
 }
