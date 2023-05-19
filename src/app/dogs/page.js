@@ -24,14 +24,8 @@ export default function Home() {
       <h1>Hello React!</h1>
       <Link href="/"><h3>Back to home</h3></Link>
       { dogs.map(dog => (
-        <h1>{ dog.name }</h1>
+        <Link href={`/dogs/${dog._id}`} key={dog.id}><h1>{dog.name}</h1></Link>
       ))}
     </main>
   )
 }
-
-//export default function ______() {
-
-// return 
-// h1
-// }

@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main>
       <h1>Hello Index Page!</h1>
-      <Link href="/dogs">Lets see the dogs</Link>
+      <Link href="/dogs">On to the dogs</Link>
     </main>
   )
 }
