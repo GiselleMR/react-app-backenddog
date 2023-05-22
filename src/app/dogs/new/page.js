@@ -9,9 +9,15 @@ export default function NewDogForm(){
         setNewDog({...newDog, [evt.tartget.id]: evt.target.value})
     }
 
-    const handleSubmit = (evt) => {
+    const handleSubmit = async (evt) => {
         evt.preventDefault();
-        const res = fetch()
+        const res = fetch('http://localhost:3000', {
+            headers: {'Content-Type' : 'application/json'},
+            method:'POST',
+            body: JSON.stringify({ name: newDog.name, age: Number(newDog.age)})
+        })
+
+        const dog = await res.json()
     }
 
     return(
